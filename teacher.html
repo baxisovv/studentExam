@@ -6,10 +6,56 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <title>Exam System</title>
+    <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
     <header>
-        
+        <ul>
+            <li><img src="images/logo.png" alt="Akdeniz University Logo"></li>
+            <li><button class="mybtn"><a href="teacher.html" class="link">Home</a></button></li>
+            <li><img src="images/pp.png" alt="profile photo" class="ppimage"></li>
+            <li class="name">Teacher name</li>
+        </ul>
     </header>
+    <div class="sidenav">
+        <a href="#">Courses</a>
+        <a href="#">Add Student</a>
+        <a href="#">Graded Exams</a>
+        <a href="#">Ungraded Exams</a>
+    </div>
+    <div class="main">
+      <div class="welcome">
+        <p>Welcome Back, Teacher Name!</p>
+      </div>
+        <div class="box-container">
+            <div class="box">
+              <div class="box-head">
+                <h4>Students</h4>
+                <img src="/images/student.png" alt="mobile" />
+              </div>
+              <div class="info">
+                  You have <a href="http://" target="_blank" rel="noopener noreferrer">#</a> registered students.
+                  Click <a href="http://" target="_blank" rel="noopener noreferrer">here</a> to see the list of students.
+                </div>
+            </div>
+            <div class="box">
+              <div class="box-head">
+                <h4>Courses</h4>
+                <img src="/images/course.png" alt="mobile" />
+              </div>
+              <div class="info">
+                You have # courses. Click <a href="courses.html">here</a> to see the courses.
+              </div>
+            </div>
+            <div class="box">
+              <div class="box-head">
+                <h4>Exams</h4>  
+                <img src="/images/exam.png" alt="mobile" />             
+              </div>
+              <div class="info">
+                There are # exams. Click <a href="exam.html">here</a> to see the exams. 
+              </div>
+            </div>
+    </div>
 </body>
 </html>

@@ -1,0 +1,130 @@
+body{
+    background-color: #7498fc;
+}
+header{
+    background-color: #5984fc;
+}
+img{
+    height: 100px;
+    width: 100px;
+    margin-top: 25px;
+}
+.mybtn{
+    margin-left: 900px;
+    margin-top: 40px;
+    margin-right: 15px;
+    border-radius: 15px;
+    border-color: rgb(114, 130, 246);
+    background-color: rgb(114, 130, 246);
+}
+.mybtn .link{
+    color: white;
+    text-decoration: none;
+}
+.ppimage{
+    height: 50px;
+    width: 50px;
+}
+ul{
+    display: flex;
+    list-style-type: none;
+}
+ul .name{
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    margin-top: 40px;
+    margin-left: 15px;
+}
+/* The sidebar menu */
+.sidenav {
+    height: 100%; /* Full-height: remove this if you want "auto" height */
+    width: 200px; /* Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: #5984fc; /* Black */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 20px;
+    margin-top: 125px;
+  }
+  
+  /* The navigation menu links */
+  .sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    display: block;
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .sidenav a:hover {
+    color: blue;
+  }
+  /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+  .main{
+    background-color: #7498fc;
+    margin-left: 200px;
+  }
+  .main .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25px, 1fr));
+    gap: 10px;
+    margin-right: 10px;
+  }
+  .main .box-container .box{
+    padding: 10px;
+    background-color: #7498fc;
+    border-radius: 10px;
+    max-height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-left: 10px;
+  }
+  .main .box-container .box img{
+    object-fit: cover;
+    text-align: center;
+    position: relative;
+    margin-right: 10px;
+    margin-left: 70px;
+    width: 45px;
+    height: 45px;
+    
+  }
+  .main .box-container .box .info{
+    font-size: 15px;
+    color: white;
+  }
+  .main .box-container .box h4{
+    font-size: 25px;
+    text-align: center;
+    color: white;
+  }
+  .box {
+    border: 5px solid #0011ff;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  .main .box-container .box .box-head{
+    display: flex;
+  }
+  .main .welcome{
+    margin-left: 100px;
+    padding: 5px;
+    margin-bottom: 10px;
+  }
+  .main .welcome p{
+    color: white;
+  }
+  .main a{
+    color: white;
+    text-decoration: underline;
+  }
