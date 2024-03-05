@@ -35,15 +35,110 @@
               <td>CSE101</td>
               <td>Computer Programming</td>
               <td>87</td>
-              <td>3<button class="mybtn"><img src="images/2795.png" alt="" class="exadd"></button></td>
+              <td>3<button class="mybtn"  data-bs-toggle="modal" data-bs-target="#exampleModal"><img src="images/2795.png" alt="" class="exadd"></button></td>
             </tr>
             <tr>
               <td>CSE236</td>
               <td>Web Programming</td>
               <td>14</td>
-              <td>2<button class="mybtn"><img src="images/2795.png" alt="" class="exadd"></td>
+              <td>2<button class="mybtn"  data-bs-toggle="modal" data-bs-target="#exampleModal"><img src="images/2795.png" alt="" class="exadd"></button></td>
+            </tr>
         </table>
     </div>
-    <div style="margin-left: 300px; margin-top: 150px;"><button class="mybtn"><img src="images/2795.png" alt="" class="homeb"></button></div>
+
+    <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Add Exam</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="addExamForm">
+                    <div class="mb-3">
+                        <label for="numQuestions" class="form-label">Number of Questions:</label>
+                        <select class="form-select" id="numQuestions">
+                            <option selected disabled>Select number of questions</option>
+                            <option value="5">5</option>
+                            <option value="10">10</option>
+                            <option value="15">15</option>
+                            <option value="20">20</option>
+                        </select>
+                    </div>
+                    <div id="questionsContainer"></div>
+                    <button type="submit" class="btn btn-primary mt-3">Add Exam</button>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Add Exam</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="addExamForm">
+                    <div class="mb-3">
+                        <label for="numQuestions" class="form-label">Number of Questions:</label>
+                        <select class="form-select" id="numQuestions">
+                            <option selected disabled>Select number of questions</option>
+                            <option value="5">5</option>
+                            <option value="10">10</option>
+                            <option value="15">15</option>
+                            <option value="20">20</option>
+                        </select>
+                    </div>
+                    <div id="questionsContainer"></div>
+                    <button type="submit" class="btn btn-primary mt-3">Add Exam</button>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById('numQuestions').addEventListener('change', function() {
+        var numQuestions = parseInt(this.value);
+        var questionsContainer = document.getElementById('questionsContainer');
+        questionsContainer.innerHTML = ''; // Clear previous questions
+
+        for (var i = 0; i < numQuestions; i++) {
+            var questionInput = document.createElement('input');
+            questionInput.setAttribute('type', 'text');
+            questionInput.setAttribute('class', 'form-control mb-3');
+            questionInput.setAttribute('placeholder', 'Question ' + (i + 1));
+            questionsContainer.appendChild(questionInput);
+        }
+    });
+
+    document.querySelector('.modal-footer .btn-secondary').addEventListener('click', function() {
+        var modal = new bootstrap.Modal(document.getElementById('exampleModal'));
+        modal.hide();
+    });
+
+    // JavaScript to handle form submission
+    document.getElementById('addExamForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        var modal = new bootstrap.Modal(document.getElementById('exampleModal'));
+        modal.hide();
+    });
+</script>
+
+
+
+    <div style="margin-left: 300px; margin-top: 150px;">
+        <button class="mybtn"><img src="images/2795.png" alt="" class="homeb"></button>
+    </div>
 </body>
 </html>

@@ -167,6 +167,7 @@ tr:hover {background-color: green;}
 .container table td .mybtn{
   margin:0;
   margin-left: 10px;
+  color: white;
 }
 .container table th{
   color: white;
